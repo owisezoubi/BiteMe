@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="367.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomePageControl">
+   <children>
+      <Button fx:id="orderButton" layoutX="149.0" layoutY="53.0" mnemonicParsing="false" onAction="#OrderButtonButtonOnClickAction" prefHeight="25.0" prefWidth="120.0" text="Order" />
+      <Button fx:id="updateMenuButton" layoutX="149.0" layoutY="97.0" mnemonicParsing="false" onAction="#updateMenuButtonOnClickAction" prefHeight="25.0" prefWidth="120.0" text="Update Menu" />
+      <Button fx:id="addNewCustomerButton" layoutX="149.0" layoutY="143.0" mnemonicParsing="false" onAction="#addNewCustomerButtonOnClickAction" text="Add New Customer" />
+      <Button fx:id="showReportButton" layoutX="149.0" layoutY="194.0" mnemonicParsing="false" onAction="#showReportButtonOnClickAction" prefHeight="25.0" prefWidth="120.0" text="Show Report" />
+      <Button fx:id="logOutButton" layoutX="46.0" layoutY="313.0" mnemonicParsing="false" onAction="#logOutButtonOnClickAction" text="Log Out" />
+      <Button fx:id="myOrdersbutton" layoutX="149.0" layoutY="240.0" mnemonicParsing="false" onAction="#myOrdersbuttonOnClickAction" prefHeight="25.0" prefWidth="120.0" text="My Orders" />
+   </children>
+</AnchorPane>
