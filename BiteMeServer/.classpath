@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BiteMeCommon"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/OCSF"/>
-	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/סמסטר 5/שיטות הנדסיות לפיתוח מערכות תוכנה/softwares/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/mysql-connector-java-8.0.13.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="/Users/owisesmac/Desktop/softwares/javafx-sdk-17.0.12/lib/javafx.web.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OCSF"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
