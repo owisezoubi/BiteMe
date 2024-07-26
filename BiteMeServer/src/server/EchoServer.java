@@ -5,6 +5,8 @@ package server;
 // license found at www.lloseng.com 
 
 import java.io.*;
+import java.net.InetAddress;
+
 import ocsf.server.*;
 
 /**
@@ -39,6 +41,34 @@ public class EchoServer extends AbstractServer
   }
 
   
+  
+  
+  public void clientConnected(ConnectionToClient client) {
+		System.out.println("---> Client has Connected");
+		try {
+
+			UpdateClient(client.getInetAddress(), client.getInetAddress().getHostAddress(), "Connected");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void clientDisconnected(ConnectionToClient client) {
+		System.out.println("---> Client has Disconnected");
+		try {
+
+			UpdateClient(client.getInetAddress(), client.getInetAddress().getHostAddress(), "Disconnected");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	
+	private void UpdateClient(InetAddress HostName, String IP, String Status) {
+		ServerUI.aFrame.UpdateClient(HostName, IP, Status);
+	}
+  
   //Instance methods ************************************************
   
   /**
@@ -47,30 +77,27 @@ public class EchoServer extends AbstractServer
    * @param msg The message received from the client.
    * @param client The connection from which the message originated.
    */
-  public void handleMessageFromClient
-    (Object msg, ConnectionToClient client)
-  {
+	public void handleMessageFromClient(Object msg, ConnectionToClient client)	{
 	    System.out.println("Message received: " + msg + " from " + client);
 	    this.sendToAllClients(msg);
-	  }
+	}
 
     
   /**
    * This method overrides the one in the superclass.  Called
    * when the server starts listening for connections.
    */
-  protected void serverStarted()
-  {
-    System.out.println
-      ("Server listening for connections on port " + getPort());
+  protected void serverStarted()	{
+	  	DataBaseControl.connectToInternalDB();
+		DataBaseControl.connectToExternalDB();
+		System.out.println("Server listening for connections on port " + getPort());
   }
   
   /**
    * This method overrides the one in the superclass.  Called
    * when the server stops listening for connections.
    */
-  protected void serverStopped()
-  {
+  protected void serverStopped()	{
     System.out.println
       ("Server has stopped listening for connections.");
   }
@@ -84,8 +111,7 @@ public class EchoServer extends AbstractServer
    * @param args[0] The port number to listen on.  Defaults to 5555 
    *          if no argument is entered.
    */
-  public static void main(String[] args) 
-  {
+  public static void main(String[] args) {
     int port = 0; //Port to listen on
 
     try
